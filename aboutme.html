@@ -2,7 +2,29 @@
 <html>
 <head>
 <title> All About Me </title>
+<script>
+function lightblue(){
+    document.getElementById("h1").style.color="lightblue";
+}
+function lightgreen(){
+  document.getElementById("h1").style.color="lightgreen";
+}
+</script>
 <style>
+#blue{
+  position:absolute;
+  top:5px;
+  left: 5px;
+  padding: 0px;
+  color: gray;
+}
+#green {
+  position:absolute;
+  top:30px;
+  left: 5px;
+  padding: 0px;
+  color:gray;
+}
 @font-face {
     font-family: KGCamdenMarketScript;
     src: url(KGCamdenMarketScript.ttf);
@@ -16,7 +38,7 @@
     src: url(KGMissKindyMarker.ttf)
 }
 body {
-    background-color: rgb(255, 235, 214);
+    background-color: #ffcc99;
     text-align: center;
 }
 #title {
@@ -27,42 +49,108 @@ body {
     height: 200px;
     top: 0px;
     background-color: #FFB28C;
+    align-items: center;
 }
 #one{
     position:absolute;
-    left: 50px;
-    top:250px;
-    background-color:rgb(255, 255, 214);
-    width: 30%;
-    margin:auto;
-    padding: 20px;
-    border: 1px solid black;
+    right:10%;
+    top:220px;
+    background-color:white;
+    width: 80%;
+    height:80%;
+}
+#intro {
+    position:absolute;
+    top:5%;
+    float:left;
+    width:40%;
+    margin:5%;
+}
+
+img {
+    width:45%;
+    position:absolute;
+    float:right;
+    top:50px;
+    right:5%;
+    padding:20px;
+    border:5px;
+    height:55%;
+    background-color: rgb(255,255, 137);
 }
 h1 {
     font-family: "KGDefyingGravity";
     font-size: 500%;
-    color: gray;
+    color: white;
 }
 h2 {
     font-family: "KGCamdenMarketScript";
     font-size: 200%;
+    color:coral;
 }
 p {
     font-family: "KGMissKindyChunky";
-    font-size: 70%;
+    font-size: 80%;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:gray;
+}
+li a {
+    font-family:"KGMissKindyChunky";
+    display: block;
+    float:left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    width:30%;
+    padding: 12px;
+}
+li a:hover {
+    background-color: #FFFF87;
+}
+#toolbar {
+    position:absolute;
+    padding:0px;
+    margin:0px;
+    top:180px;
+    left:0px;
+    width:100%;
+
 }
 </style>
 </head>
 
 <body>
 <div id="title">
-    <h1> [All|About|Me!] <h1>
+    <h1 id="h1"> [All|About|Me!] <h1>
 </div>
+<button id= "blue" onclick="lightblue()"> Click me! </button>
+<button id = "green" onclick="lightgreen()"> Click me!</button>
 
 <div id="one">
+  <div id="intro" >
     <h2> Introduction </h2>
+
     <p> Hello! My name is Amanda and I really really really like to eat pizza! My favorite animal is a cat and in the future I hope to adopt a lot of cats and live happily ever after with all my cats </p>
+
+    <p> I'm a rising junior at IMSA! At school I do robotics and aviation. </p>
+    <p> I really like to eat chicken nuggets and fried chicken. Some times however, I eat fish sticks or fried fish. </p>
+  </div>
+  <div id="pic">
+    <img src="cats.jpg" alt="cat">
+  </div>
 </div>
 
+<div id="toolbar">
+  <ul>
+    <li class="yea"><a href="allaboutme.html">About Me</a></li>
+    <li class="yea"><a href="activites.html">Activities</a></li>
+    <li class="yea"><a href="random.html">Random</a></li>
+  </ul>
+</div>
 </body>
 </html>
